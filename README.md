@@ -53,7 +53,17 @@
    (#masv,hoten,NgaySinh)
 ![2](https://github.com/user-attachments/assets/383c4f32-4808-43d9-83c3-7be8022817bf)
 
+Tạo các cột và chọn kiểu cho từng thuộc tính gồm (#masv,hoten,NgaySinh)
 
+![3](https://github.com/user-attachments/assets/2cb017c5-4271-4f07-ae7a-c68f2a9378a6)
+
+Ctrl S lưu bảng 
+
+![4](https://github.com/user-attachments/assets/d3ee1182-287d-4109-b9ce-05f93b4c6ff1)
+
+Tiếp tục tạo bảng tiếp theo
+
+![5](https://github.com/user-attachments/assets/195d4007-be31-4e9e-b455-2eb978dfc25e)
 
 
 
