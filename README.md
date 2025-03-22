@@ -48,27 +48,66 @@
 # Quá trình các bước làm :
 ## Bước 1: Tạo DATABASE 
 ![1](https://github.com/user-attachments/assets/43e68684-8e6c-4223-b017-d86d47a42fdf)
+
 ## Bước 2 : Tạo bảng
-1. Tạo bảng SinhVien
-   (#masv,hoten,NgaySinh)
-![2](https://github.com/user-attachments/assets/383c4f32-4808-43d9-83c3-7be8022817bf)
+1. Tạo bảng SinhVien(#masv,hoten,NgaySinh)
+
+![2](https://github.com/user-attachments/assets/7daddd22-b1ef-4a8b-97dc-5d738b8a6185)
 
 Tạo các cột và chọn kiểu cho từng thuộc tính gồm (#masv,hoten,NgaySinh)
-
 ![3](https://github.com/user-attachments/assets/2cb017c5-4271-4f07-ae7a-c68f2a9378a6)
 
-Ctrl S lưu bảng 
-
+Ctrl S để lưu bảng 
 ![4](https://github.com/user-attachments/assets/d3ee1182-287d-4109-b9ce-05f93b4c6ff1)
 
 Tiếp tục tạo bảng tiếp theo
-
 ![5](https://github.com/user-attachments/assets/195d4007-be31-4e9e-b455-2eb978dfc25e)
 
+## Làm tương tự các bảng còn lại
+
+2. Tạo bảng Lop(#maLop,tenLop)
+
+![lop](https://github.com/user-attachments/assets/b46a3cd1-80ca-4353-92ba-74240b2ca5ac)
+
+3. Tạo bảng GVCN(#@maLop,#@magv,#HK)
+
+![GVCN](https://github.com/user-attachments/assets/75ee74ac-ffc7-4c56-8acd-9a419e580353)
+
+4. Tạo bảng LopSV(#@maLop,#@maSV,ChucVu)
+
+![lopSV](https://github.com/user-attachments/assets/f9ab229b-215b-4c55-b23f-3f99998160e1)
+
+5. Tạo bảng GiaoVien(#magv,hoten,NgaySinh,@maBM)
+
+![Giaovien](https://github.com/user-attachments/assets/43f6d17b-8afd-48c1-b9f7-479eb0d89da9)
 
 
+6. Tạo bảng BoMon(#MaBM,tenBM,@maKhoa)
+
+![BoMon](https://github.com/user-attachments/assets/e752c2fe-1bbf-403f-b45d-f259f00af219)
 
 
+7. Tạo bảng Khoa(#maKhoa,tenKhoa)
+
+![khoa](https://github.com/user-attachments/assets/24f0bf8a-ea56-4d5a-8499-e6bef8114b55)
+
+
+8. Tạo bảng MonHoc(#mamon,Tenmon,STC)
+
+![MonHoc](https://github.com/user-attachments/assets/837b8523-c69d-4a7b-bac4-b464337e61de)
+
+
+9. Tạo bảng LopHP(#maLopHP,TenLopHP,HK,@maMon,@maGV)
+
+![LopHP](https://github.com/user-attachments/assets/d0d6f9b4-c868-4df7-9336-043279414cb1)
+
+
+10. Tạo bảng  DKMH(#@maLopHP,#@maSV,DiemTP,DiemThi,PhanTramThi)
+
+![DKMH](https://github.com/user-attachments/assets/ed18fcc7-0883-4b6b-bf82-b444bc8303fb)
+
+## Bước 3 : Tạo khóa chính (PK) , Khóa ngoại (FK) , Ràng buộc (CK)
+1. Bảng SinhVien
 
 
 
