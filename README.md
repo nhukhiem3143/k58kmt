@@ -46,6 +46,12 @@
 
 
 # Quá trình các bước làm :
+## Bước 1: Tạo DATABASE 
+![1](https://github.com/user-attachments/assets/43e68684-8e6c-4223-b017-d86d47a42fdf)
+## Bước 2 : Tạo bảng
+1. Tạo bảng SinhVien
+   (#masv,hoten,NgaySinh)
+![2](https://github.com/user-attachments/assets/383c4f32-4808-43d9-83c3-7be8022817bf)
 
 
 
