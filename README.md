@@ -146,17 +146,17 @@ Sau đó để chọn FK Chuột phải chọn relationships
 
 ![Screenshot 2025-03-23 205709](https://github.com/user-attachments/assets/2c8d51f5-e6c2-4902-a22b-4a35cfa5f1c3)
 
+Tạo CK cho HK ( trong khoảng 1 - 3 )
+
+![Screenshot 2025-03-23 210222](https://github.com/user-attachments/assets/87f2cedc-442f-4f47-bf9b-d772559d93b9)
+
+Sau đó Ctr S để lưu lại
+
+## Các bảng sau làm tương tự
+
+4. Bảng LopSV
 
 
-
-
-
-
-
-
-
-
-  Bảng LopSV
   Bảng GiaoVien
   Bảng BoMon
   Bảng Khoa
