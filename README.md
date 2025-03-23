@@ -109,8 +109,60 @@ Tiếp tục tạo bảng tiếp theo
 ## Bước 3 : Tạo khóa chính (PK) , Khóa ngoại (FK) , Ràng buộc (CK)
 1. Bảng SinhVien
 
+![3](https://github.com/user-attachments/assets/92798405-4f80-4706-8c9d-d8b43c0cb3ba)
+
+Tạo Check Constraints cho NgaySinh
+
+![CK_SinhVien](https://github.com/user-attachments/assets/e4115bbf-31eb-47b8-824a-2be1f2d6716c)
+
+![Ck](https://github.com/user-attachments/assets/3a4eefe7-0786-49eb-8fc9-f0531cfa88ad)
+
+Sau khi thực hiện xong thì Ctrl S để lưu lại Ck sẽ có tác dụng
+
+![Ck (2)](https://github.com/user-attachments/assets/fdebef36-f428-4776-8c29-36b3fa5d3ec6)
+
+Để kiểm tra xem CK có tác dụng hay chưa 
+
+![Screenshot 2025-03-23 201542](https://github.com/user-attachments/assets/6c203db0-0e1c-41a0-9e00-b69daad57406)
+
+Sau đó nhập giá trị khác với điều kiện đã đặt
+
+![Screenshot 2025-03-23 201402](https://github.com/user-attachments/assets/6e7fc12f-d0e6-432f-b12f-5be056e2976a)
+
+2. Bảng Lop ( tương tự bảng SinhVien )
+
+![6](https://github.com/user-attachments/assets/fd79d006-c464-43f0-80a5-874e75e561db)
+
+3. Bảng GVCN
+### Trong bảng này có 3 khóa PK, trong đó malop và magv vừa là PK vừa là FK , Hk là PK ta làm như sau: 
+
+![Screenshot 2025-03-23 204548](https://github.com/user-attachments/assets/961a5845-cd85-466e-95d7-98140d4e5a20)
+
+Sau đó để chọn FK Chuột phải chọn relationships
+
+![Screenshot 2025-03-23 205046](https://github.com/user-attachments/assets/50b41f18-2e67-4eae-b64a-b7f02f3e23f8)
+
+![Screenshot 2025-03-23 205236](https://github.com/user-attachments/assets/4d6b4294-3ca4-4c55-990b-626e43e051ad)
+
+![Screenshot 2025-03-23 205709](https://github.com/user-attachments/assets/2c8d51f5-e6c2-4902-a22b-4a35cfa5f1c3)
 
 
+
+
+
+
+
+
+
+
+
+  Bảng LopSV
+  Bảng GiaoVien
+  Bảng BoMon
+  Bảng Khoa
+  Bảng MonHoc
+  Bảng LopHP
+  Bảng DKMH
 
 
 
