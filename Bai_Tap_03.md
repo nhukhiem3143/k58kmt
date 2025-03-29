@@ -43,19 +43,6 @@
 4. Kết quả AI phải phù hợp với yêu cầu, nếu quá sai lệch <=> sv ko đọc => Cấm thi
 5. Nên nhớ: cấm thi là ko có vùng cấm và thầy chưa bao giờ nói đùa về việc cấm thi.
 
-Nhắc lại nội quy học tập:
-SV vi phạm 1 trong các lỗi sau chỉ 1 lần sẽ bị cấm thi: 🚫
-1. Nghỉ ko lý do chính đáng.
-2. Không làm bài tập về nhà.
-3. Vắng bài kiểm tra.
-4. Nói chuyện tự do trong lớp.
-
-Bên cạnh đó, sẽ có điểm thưởng 10đ cho sv :  🎁
-1. Trả lời đúng câu hỏi trên lớp.
-2. Hỏi câu hỏi làm thầy khó trả lời.
-
----NHẮC LẠI THỜI HẠN DEADLINE: 23H59 NGÀY 30/03/2025---
-
 # Các bước làm :
 ## Bước 1 : Tạo bảng điểm và sửa bảng DKMH
 1. Tạo bảng diem
@@ -117,9 +104,9 @@ Bên cạnh đó, sẽ có điểm thưởng 10đ cho sv :  🎁
 #### - Môn học (MonHoc) có thể có nhiều lớp học phần (LopHP), nhưng mỗi lớp học phần chỉ thuộc về một môn học cụ thể.
 #### - Việc sử dụng khóa chính và khóa ngoại giúp đảm bảo tính toàn vẹn dữ liệu và tránh trùng lặp. Khi thực hiện truy vấn, ta có thể kết hợp các bảng này để lấy thông tin chi tiết về sinh viên, điểm số, lớp học phần, giảng viên, và các bộ môn liên quan.
 
-## Bước 4 : Truy vẫn dữ liệu 
+## Bước 4 : Truy vấn dữ liệu 
 ### Tính được điểm thành phần của 1 sinh viên đang học tại 1 lớp học phần
-#### - Ta sẽ truy vẫn dữ liệu trong 3 bảng SinhVien, diem, DKMH
+#### - Ta sẽ truy vấn dữ liệu trong 3 bảng SinhVien, diem, DKMH
 #### 1. Dữ liệu bảng SinhVien
 
 ![Screenshot 2025-03-29 131427](https://github.com/user-attachments/assets/9910c59a-ce86-4a37-bc56-6c97084374a3)
@@ -137,10 +124,26 @@ Bên cạnh đó, sẽ có điểm thưởng 10đ cho sv :  🎁
 
 ![Screenshot 2025-03-29 131713](https://github.com/user-attachments/assets/7d667309-c0a4-4c06-b735-6dc13f751a9a)
 
-2. Viết lệnh để truy xuất và tính điểm TP , điểm Tong
-
-![Screenshot 2025-03-29 131952](https://github.com/user-attachments/assets/7dc2dbc1-ceaf-4bc4-89a3-b9d0f4931369)
-
+2. Viết lệnh để truy vấn và tính điểm TP , điểm Tong
+```sql
+WITH DiemThanhPhan AS (
+    SELECT 
+        dkmh.MaSV,
+        ROUND(AVG(d.diem), 3) AS Diem_TP,  -- Làm tròn đến 3 chữ số thập phân
+        COUNT(*) AS SoLuongDiem  -- Đếm số lượng điểm thành phần
+    FROM Diem d 
+    JOIN DKMH dkmh ON d.id_dk = dkmh.id_dk
+    GROUP BY dkmh.MaSV
+)
+SELECT 
+    dkmh.id_dk, dkmh.MaSV, sv.HoTen,sv.NgaySinh, 
+    dkmh.MaLopHP,dtp.Diem_TP, 
+    dtp.SoLuongDiem, dkmh.DiemThi, dkmh.PhanTramThi,
+    ROUND((dtp.Diem_TP * (1 - dkmh.PhanTramThi) + dkmh.DiemThi * dkmh.PhanTramThi), 3) AS DiemTong  -- Làm tròn đến 3 chữ số thập phân
+FROM DKMH dkmh
+JOIN SinhVien sv ON dkmh.MaSV = sv.MaSV
+JOIN DiemThanhPhan dtp ON dkmh.MaSV = dtp.MaSV;
+```
 #### Kết quả 
 #### - Truy vấn dữ liệu trong các bảng cần thiết và Tính được điểm TP khi có nhiều điểm Tp với công thức: ĐiểmTP = Tổng các điểm / số lượng điểm
 
